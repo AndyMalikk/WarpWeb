@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100dvw;
+  background-color: #161519;
+  overflow-x: hidden;
+}
+#particles {
+  z-index: -1;
+  height: 80vh;
+  width: 100%;
+  position: absolute;
+}
+@layer-base {
+  @font-face {
+    font-family: "montserrat-bold";
+    src: url("/fonts/montserrat-bold.woff2") format("woff2");
+
+    font-family: "montserrat-medium";
+    src: url("/fonts/montserrat-medium.woff2") format("woff2");
+  }
+}
+
+@layer utilities {
+  /* Put inside 70vh div */
+  .hero-heading {
+    @apply text-white text-6xl max-w-[1120px] text-center font-montserrat-bold font-semibold;
+  }
+  .heading {
+    @apply text-accent font-montserrat-bold;
+  }
+}
