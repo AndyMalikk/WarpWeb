@@ -6,10 +6,11 @@ export default {
       fontFamily: {
         "montserrat-bold": ["montserrat-bold", "sans-serif"],
         "montserrat-medium": ["montserrat-medium", "sans-serif"],
+        "karla-regular": ["karla-regular", "sans-serif"],
       },
       colors: {
         primary: "#161519",
-        secondary: "#111014",
+        secondary: "#141318",
         accent: "#02af5f",
       },
     },
