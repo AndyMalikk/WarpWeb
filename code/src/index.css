@@ -11,6 +11,7 @@ body {
   background-color: #161519;
   overflow-x: hidden;
   font-family: "montserrat", sans-serif;
+  min-height: 100vh;
 }
 #particles {
   z-index: -1;
@@ -50,11 +51,10 @@ body {
 }
 
 @layer utilities {
-  /* Put inside 70vh div */
+  /*FONT*/
   .hero-heading {
     @apply text-white text-3xl text-center font-montserrat-bold capitalize mx-2 max-w-[1440px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl;
   }
-
   .heading {
     @apply text-accent text-2xl font-montserrat-bold lg:text-3xl xl:text-4xl;
   }
@@ -66,17 +66,36 @@ body {
   .paragraph {
     @apply text-sm font-karla-regular lg:text-lg leading-6;
   }
-  .nav-text {
-    @apply text-sm font-montserrat-medium leading-6;
-  }
+  /*BUTTONS*/
   .button {
     @apply bg-accent text-white font-karla-regular rounded-lg p-2;
   }
   .button-service {
     @apply text-white font-karla-regular text-sm text-start w-full bg-[#111014] p-3 rounded-lg;
   }
-  /* Create Portfolio IMG */
+  /*FORMS*/
   .form-input {
-    @apply text-white bg-transparent border-b-[1px] border-accent focus:outline-none caret-white w-full md:w-full;
+    @apply text-white bg-transparent border-b-[1px] border-accent focus:outline-none caret-white w-full md:w-[95%];
+  }
+  /*LAYOUT*/
+  .page-width {
+    @apply max-w-[1440px] m-auto;
+  }
+  /*MISC*/
+  .logo {
+    @apply w-[75px] h-auto sm:w-[100px] md:w-[125px];
+  }
+  /* NAVBAR */
+  .nav-text {
+    @apply text-white capitalize text-sm font-montserrat-medium;
+  }
+  .nav-a {
+    @apply h-[100%] px-[24px] flex items-center; /* FIX THE PADDING */
+  }
+  .nav-li {
+    @apply hidden lg:flex;
+  }
+  .nav-a-sidebar {
+    @apply h-[100%] px-[24px] py-[20px] flex justify-center;
   }
 }

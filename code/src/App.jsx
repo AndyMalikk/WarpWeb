@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Intro from "./components/homepage/Intro";
 import Portfolio from "./components/homepage/Portfolio";
@@ -9,6 +10,7 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <>
+      <Navbar />
       <Hero
         subheading="Najdou si k vám zákazníci cestu?"
         heading="Digitální prezentace posune váš byznys vpřed"

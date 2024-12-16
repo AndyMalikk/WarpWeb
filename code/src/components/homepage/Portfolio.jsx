@@ -17,7 +17,7 @@ const Portfolio = (props) => {
   return (
     <>
       {/* text container */}
-      <div className="bg-secondary pb-16 lg:mb-40">
+      <div className="bg-secondary pb-16 lg:my-40">
         <div className="text-center mb-8 pt-8">
           <p className="paragraph text-white">Moje projekty</p>
           <h2 className="heading">Portfolio</h2>

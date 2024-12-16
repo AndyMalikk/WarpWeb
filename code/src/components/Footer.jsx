@@ -6,9 +6,9 @@ const Footer = () => {
     <>
       {/*stahnout react knihovnu na forms*/}
       {/*Form contacts section */}
-      <div className="flex flex-col mb-16 p-8 md:flex-row md:justify-around">
+      <div className="flex flex-col mb-16 p-4 page-width md:flex-row md:justify-around md:gap-24">
         {/*form*/}
-        <div className="mb-16 md:w-1/3 lg:w-1/3">
+        <div className="mb-16 md:w-1/3 lg:w-1/2">
           <form>
             <label htmlFor="name" className="paragraph text-white">
               Vaše jméno
@@ -54,7 +54,7 @@ const Footer = () => {
           </form>
         </div>
         {/*contacts*/}
-        <div className="md:w-1/3 lg:w-1/3">
+        <div className="md:w-1/3 lg:w-1/2">
           <h2 className="heading mb-2">Kontakty</h2>
           <div className="flex items-center gap-4">
             <img
@@ -74,7 +74,7 @@ const Footer = () => {
         <img
           src="./imgs/warp-logo.png"
           alt="warp logo"
-          className="w-[125px] h-[125px]"
+          className="w-[125px] h-auto py-8"
         />
         <ul className="nav-text text-white flex gap-4 mb-4">
           <li>
@@ -87,7 +87,7 @@ const Footer = () => {
             <a href="#">Služby</a>
           </li>
           <li>
-            <a href="#">Kontakt</a>
+            <a href="#">Kontakty</a>
           </li>
         </ul>
         <ul className="flex gap-4 mb-4">

@@ -12,6 +12,7 @@ export default {
         primary: "#161519",
         secondary: "#141318",
         accent: "#02af5f",
+        "black-blur": "rgba(0,0,0,0.7)",
       },
     },
   },
