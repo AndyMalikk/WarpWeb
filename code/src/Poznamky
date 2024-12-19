@@ -1,6 +1,10 @@
-1. Vytvor props className v BUTTON componentu - x
-2. VYRES RESPONSIVITU - koukni na YouTube - x
-3. Image overlay v INTRO componentu
+3. Image overlay v INTRO componentu - grid - REUSE IT in aboutmepage
 4. Particles lines jdou out of bound kdyz je cursor pod HERO sekci.
 5. Transform BUTTON animation
 6. Nastavit JASNE DANY margins mezi sekcema
+7. Nastavit Paddingy.
+8. CLEAN THE CODE DAMN
+9. V Navbaru se musis naucit nejak handlovat Routing kdyz klikas na krizek a menu svg. Video najdes na youtube. {children}?
+10. Clean up React Router
+11. Pridej neco do homepage, je moc prazdna. Pod portfolio me napada dat nejaky video skladani webovky.
+12. Upgrade to router v7

@@ -90,7 +90,7 @@ body {
     @apply text-white capitalize text-sm font-montserrat-medium;
   }
   .nav-a {
-    @apply h-[100%] px-[24px] flex items-center; /* FIX THE PADDING */
+    @apply h-[100%] px-[24px] flex items-center cursor-pointer; /* FIX THE PADDING */
   }
   .nav-li {
     @apply hidden lg:flex;

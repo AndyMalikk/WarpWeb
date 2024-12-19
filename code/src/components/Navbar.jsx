@@ -1,30 +1,17 @@
 import { React, useState, useEffect } from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  {
-    /* Onclick event sets state of sidebarVisible to true or false*/
-  }
 
+  /*Function handling onClick events */
   function toggleSideBar() {
     setSidebarVisible(() => !sidebarVisible);
   }
 
-  {
-    /*USEEFFECT will check if page is scrolled, if it is it will set darker tone for the NAVBAR */
-  }
-  useEffect(() => {
-    function handleScroll() {
-      setScrolled(window.scrollY > 0);
-    }
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <nav className={`bg-transparent fixed top-0 w-full ${scrolled ? "bg-primary" : "bg-transparent"}`}>
+    <nav className="bg-transparent fixed top-0 w-full">
       {/*SIDEBAR*/}
       <ul
         id="sidebar"
@@ -38,10 +25,7 @@ const Navbar = () => {
           onClick={toggleSideBar}
           className="h-[75px] mr-auto"
         >
-          <a
-            href="#"
-            className="nav-a"
-          >
+          <div className="nav-a">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="28px"
@@ -51,49 +35,49 @@ const Navbar = () => {
             >
               <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
             </svg>
-          </a>
+          </div>
         </li>
         <li className="h-[75px]">
-          <a
-            href="#"
+          <Link
+            to="/o-mne"
             className="nav-a"
           >
             O mně
-          </a>
+          </Link>
         </li>
         <li className="h-[75px] w-full">
-          <a
-            href="#"
+          <Link
+            to="/portfolio"
             className="nav-a"
           >
             Portfolio
-          </a>
+          </Link>
         </li>
         <li className="h-[75px] w-full">
-          <a
-            href="#"
+          <Link
+            to="/sluzby"
             className="nav-a"
           >
             Služby
-          </a>
+          </Link>
         </li>
         <li className="h-[75px]">
-          <a
-            href="#"
+          <Link
+            to="/kontakty"
             className="nav-a"
           >
             <Button
               label="Kontaktovat"
               className="button"
             />
-          </a>
+          </Link>
         </li>
       </ul>
       {/*DESKTOP*/}
       <ul className="nav-text w-full sticky top-0 h-[75px] list-none flex justify-end items-center max-w-[1440px] m-auto ">
         <li className=" mr-auto">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="nav-a"
           >
             <img
@@ -101,51 +85,45 @@ const Navbar = () => {
               alt=""
               className="logo"
             />
-          </a>
+          </Link>
         </li>
         <li className=" nav-li">
-          <a
-            href="#"
+          <Link
+            to="/o-mne"
             className="nav-a"
           >
             O mně
-          </a>
+          </Link>
         </li>
         <li className="nav-li">
-          <a
-            href="#"
+          <Link
+            to="/portfolio"
             className="nav-a"
           >
             Portfolio
-          </a>
+          </Link>
         </li>
         <li className=" nav-li">
-          <a
-            href="#"
+          <Link
+            to="sluzby"
             className="nav-a"
           >
             Služby
-          </a>
+          </Link>
         </li>
         <li className=" nav-li">
-          <a
-            href="#"
+          <Link
+            to="kontakty"
             className="nav-a"
           >
             <Button
               label="Kontaktovat"
               className="button"
             />
-          </a>
+          </Link>
         </li>
-        <li
-          onClick={toggleSideBar}
-          className=""
-        >
-          <a
-            href="#"
-            className="nav-a lg:hidden"
-          >
+        <li onClick={toggleSideBar}>
+          <div className="nav-a lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="28px"
@@ -155,7 +133,7 @@ const Navbar = () => {
             >
               <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
             </svg>
-          </a>
+          </div>
         </li>
       </ul>
     </nav>

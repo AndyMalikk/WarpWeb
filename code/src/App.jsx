@@ -1,37 +1,46 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Intro from "./components/homepage/Intro";
-import Portfolio from "./components/homepage/Portfolio";
-import Services from "./components/homepage/Services";
-import Review from "./components/homepage/Review";
-import Footer from "./components/Footer";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/Homepage";
+import NotFoundPage from "./pages/NotFoundPage";
+import ServicePage from "./pages/ServicePage";
+import ContactPage from "./pages/ContactPage";
+import AboutMePage from "./pages/AboutMePage";
+import PortfolioPage from "./pages/PortfolioPage";
 
+/*routing through the web app with an array of objects stating their path and what they should load*/
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "/o-mne",
+    element: <AboutMePage />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "/portfolio",
+    element: <PortfolioPage />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "/sluzby",
+    element: <ServicePage />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "/kontakty",
+    element: <ContactPage />,
+    errorElement: <NotFoundPage />,
+  },
+]);
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Hero
-        subheading="Najdou si k vám zákazníci cestu?"
-        heading="Digitální prezentace posune váš byznys vpřed"
-      />
-      <Intro />
-      <Portfolio
-        images={[
-          "./imgs/EmptyIMG.jpg",
-          "./imgs/EmptyIMG.jpg",
-          "./imgs/EmptyIMG.jpg",
-          "./imgs/EmptyIMG.jpg",
-        ]}
-      />
-      <Services />
-      <Review
-        reviewText="'Práce proběhla výborně. Byli jsme nadšeni z rychlosti vývoje i z
-        celkového výsledku.'"
-        name="Jana Nováková"
-        reviewImg="./imgs/EmptyIMG.jpg"
-      />
-      <Footer />
+      <React.StrictMode>
+        <RouterProvider router={router} />
+      </React.StrictMode>
     </>
   );
 };

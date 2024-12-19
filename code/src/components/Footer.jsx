@@ -10,7 +10,10 @@ const Footer = () => {
         {/*form*/}
         <div className="mb-16 md:w-1/3 lg:w-1/2">
           <form>
-            <label htmlFor="name" className="paragraph text-white">
+            <label
+              htmlFor="name"
+              className="paragraph text-white"
+            >
               Vaše jméno
             </label>
             <br />
@@ -22,7 +25,10 @@ const Footer = () => {
               className="form-input mb-4"
             />
             <br />
-            <label htmlFor="email" className="paragraph text-white">
+            <label
+              htmlFor="email"
+              className="paragraph text-white"
+            >
               Váš email
             </label>
             <br />
@@ -35,7 +41,10 @@ const Footer = () => {
             />
             <br />
             {/* ::after for dropdown*/}
-            <label htmlFor="message" className="paragraph text-white">
+            <label
+              htmlFor="message"
+              className="paragraph text-white"
+            >
               Řekněte mi o vašem projektu
             </label>
             <br />
@@ -50,7 +59,10 @@ const Footer = () => {
             />
             <br />
             <br />
-            <Button label="Odeslat" className="button" />
+            <Button
+              label="Odeslat"
+              className="button"
+            />
           </form>
         </div>
         {/*contacts*/}
@@ -64,9 +76,7 @@ const Footer = () => {
             />
             <p className="paragraph text-white">info@warp.cz</p>
           </div>
-          <p className="heading2 mt-20 max-w-[300px]">
-            Pojďme společně posílit váš byznys
-          </p>
+          <p className="heading2 mt-20 max-w-[300px]">Pojďme společně posílit váš byznys</p>
         </div>
       </div>
       {/* Bottom section */}

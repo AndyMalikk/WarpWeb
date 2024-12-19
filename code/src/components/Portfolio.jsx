@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../Button";
+import Button from "./Button";
 
 const Portfolio = (props) => {
   {
@@ -24,11 +24,12 @@ const Portfolio = (props) => {
         </div>
 
         {/* img container */}
-        <div className="flex flex-col md:flex-row md:justify-center md:flex-wrap lg:justify-center mb-4 md:mb-8">
-          {imageElements}
-        </div>
+        <div className="flex flex-col md:flex-row md:justify-center md:flex-wrap lg:justify-center mb-4 md:mb-8">{imageElements}</div>
         <div className="flex justify-center items-center">
-          <Button label="Zobrazit celé portfolio" className="button" />
+          <Button
+            label="Zobrazit celé portfolio"
+            className="button"
+          />
         </div>
       </div>
     </>
