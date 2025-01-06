@@ -74,7 +74,7 @@ const Navbar = () => {
         </li>
       </ul>
       {/*DESKTOP*/}
-      <ul className="nav-text w-full sticky top-0 h-[75px] list-none flex justify-end items-center max-w-[1440px] m-auto ">
+      <ul className="nav-text w-full sticky top-0 h-[75px] list-none flex justify-end items-center page-width mt-2">
         <li className=" mr-auto">
           <Link
             to="/"
@@ -105,7 +105,7 @@ const Navbar = () => {
         </li>
         <li className=" nav-li">
           <Link
-            to="sluzby"
+            to="/sluzby"
             className="nav-a"
           >
             Služby
@@ -113,11 +113,11 @@ const Navbar = () => {
         </li>
         <li className=" nav-li">
           <Link
-            to="kontakty"
+            to="/kontakty"
             className="nav-a"
           >
             <Button
-              label="Kontaktovat"
+              label="KONTAKTOVAT"
               className="button"
             />
           </Link>

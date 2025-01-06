@@ -1,20 +1,105 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
+import Select from "react-select";
 
 const Footer = () => {
+  /* OPTIONS FOR FORM SELECT */
+  const options = [
+    { value: "ui/ux-design", label: "UI/UX Design" },
+    { value: "web-development", label: "Web Development" },
+  ];
+
+  // State to store form data
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    selectedOptions: [],
+  });
+
+  // Handle input change
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Handle Select input change
+  const handleSelectChange = (selectedOptions) => {
+    setFormData({
+      ...formData,
+      selectedOptions,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData); // Log form data to the console
+  };
+
+  // Custom styles for Select component
+  const colorStyles = {
+    control: (styles, state) => ({
+      ...styles,
+      backgroundColor: "transparent",
+      border: "none",
+      borderBottom: state.isFocused ? "2px solid gray" : "1px solid gray",
+      boxShadow: "none",
+      borderRadius: 0,
+      paddingTop: "8px",
+      paddingLeft: 0, // Remove any left padding
+      fontFamily: "Karla, sans-serif",
+      fontSize: "18px", // Adjust font size for both placeholder and selected value
+      "&:hover": {
+        borderBottom: "2px solid gray",
+      },
+    }),
+    placeholder: (styles) => ({
+      ...styles,
+      color: "#ccc", // Placeholder color
+      fontStyle: "normal", // Remove italic style
+      fontFamily: "Karla, sans-serif",
+      fontSize: "18px", // Adjust placeholder font size here
+      paddingLeft: 0,
+      marginLeft: 0,
+    }),
+    menu: (styles) => ({
+      ...styles,
+      backgroundColor: "#161519",
+      marginTop: 0,
+      borderRadius: 0,
+      border: "none",
+      fontFamily: "Karla, sans-serif",
+      fontSize: "18px", // Adjust font size for the menu items
+    }),
+    option: (styles, state) => ({
+      ...styles,
+      backgroundColor: state.isSelected ? "#333" : "#161519",
+      color: state.isSelected ? "#fff" : "#ccc",
+      fontFamily: "Karla, sans-serif",
+      fontSize: "18px", // Adjust font size for the options in the dropdown
+      "&:hover": {
+        backgroundColor: "#333",
+        color: "#fff",
+      },
+    }),
+  };
+
   return (
     <>
-      {/*stahnout react knihovnu na forms*/}
-      {/*Form contacts section */}
-      <div className="flex flex-col mb-16 p-4 page-width md:flex-row md:justify-around md:gap-24">
-        {/*form*/}
-        <div className="mb-16 md:w-1/3 lg:w-1/2">
-          <form>
+      {/*Form contacts section*/}
+      <div className="flex flex-col p-4 page-width md:flex-row md:justify-around md:gap-24">
+        {/*FORM*/}
+        <div className="mb-16 md:w-1/3 lg:w-2/3">
+          <form onSubmit={handleSubmit}>
             <label
               htmlFor="name"
               className="paragraph text-white"
             >
-              Vaše jméno
+              Jméno
             </label>
             <br />
             <input
@@ -22,6 +107,8 @@ const Footer = () => {
               id="name"
               name="name"
               placeholder=""
+              value={formData.name}
+              onChange={handleChange}
               className="form-input mb-4"
             />
             <br />
@@ -29,7 +116,7 @@ const Footer = () => {
               htmlFor="email"
               className="paragraph text-white"
             >
-              Váš email
+              Email
             </label>
             <br />
             <input
@@ -37,36 +124,51 @@ const Footer = () => {
               id="email"
               name="email"
               placeholder=""
+              value={formData.email}
+              onChange={handleChange}
               className="form-input mb-4"
             />
             <br />
-            {/* ::after for dropdown*/}
+            {/*DROPDOWN SELECT*/}
+
+            <Select
+              options={options}
+              value={formData.selectedOptions}
+              onChange={handleSelectChange}
+              isMulti
+              styles={colorStyles}
+              placeholder="Typ projektu"
+            />
+            <br />
             <label
               htmlFor="message"
               className="paragraph text-white"
             >
-              Řekněte mi o vašem projektu
+              Popište váš projekt
             </label>
             <br />
             <textarea
               cols="60"
               rows="8"
               id="message"
-              name="textarea"
+              name="message"
               placeholder=""
+              value={formData.message}
+              onChange={handleChange}
               wrap="soft"
               className="form-input h-16 resize-none overflow-auto text-start"
             />
             <br />
             <br />
             <Button
-              label="Odeslat"
+              label="ODESLAT"
               className="button"
             />
           </form>
         </div>
-        {/*contacts*/}
-        <div className="md:w-1/3 lg:w-1/2">
+
+        {/*Contacts*/}
+        <div className="md:w-1/3 lg:w-1/3">
           <h2 className="heading mb-2">Kontakty</h2>
           <div className="flex items-center gap-4">
             <img
@@ -76,9 +178,10 @@ const Footer = () => {
             />
             <p className="paragraph text-white">info@warp.cz</p>
           </div>
-          <p className="heading2 mt-20 max-w-[300px]">Pojďme společně posílit váš byznys</p>
+          <p className="heading2 mt-10 md:mt-20 max-w-[300px]">Pojďme společně posílit váš byznys</p>
         </div>
       </div>
+
       {/* Bottom section */}
       <div className="bg-secondary flex justify-center flex-col items-center">
         <img

@@ -6,17 +6,30 @@ import Portfolio from "../components/Portfolio";
 import Services from "../components/Services";
 import Review from "../components/Review";
 import Footer from "../components/Footer";
+import TextSection from "../components/TextSection";
 
 const HomePage = () => {
   return (
     <>
       <Navbar />
       <Hero
-        subheading="Buďte vidět. Buďte online." /* budte videt. budte online. */
-        heading="Profesionální web pro váš byznys na míru" /*Profesionalni web pro vas byznys na miru */
+        subheading="Buďte vidět. Buďte online."
+        heading="Buďte tam kde vás zákazníci hledají"
       />
-      <Intro />
+      <Intro
+        subheading="Co dělám?"
+        heading="Webové stránky na zakázku"
+        body="Warp je česká digitální agentura, která pomáhá firmám vyniknout online.
+        Vytvářím našim klientům webové stránky, které nejen že dobře vypadají, ale také jim dávají na trhu výhodu."
+        img="./imgs/EmptyIMG.jpg"
+        buttonShown={true}
+        buttonLabel="CHCI WEB"
+      />
       <Portfolio images={["./imgs/EmptyIMG.jpg", "./imgs/EmptyIMG.jpg", "./imgs/EmptyIMG.jpg", "./imgs/EmptyIMG.jpg"]} />
+      <TextSection
+        heading="Webové stránky nemusí stát statisíce."
+        body="Nabízíme webové stránky za dostupné ceny, ideální pro malé byznysy a začínající podnikatele."
+      />
       <Services />
       <Review
         reviewText="'Práce proběhla výborně. Byli jsme nadšeni z rychlosti vývoje i z

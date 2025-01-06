@@ -17,9 +17,9 @@ const Portfolio = (props) => {
   return (
     <>
       {/* text container */}
-      <div className="bg-secondary pb-16 lg:my-40">
+      <div className="bg-secondary mb-20 py-20 lg:mb-60">
         <div className="text-center mb-8 pt-8">
-          <p className="paragraph text-white">Moje projekty</p>
+          <p className="paragraph text-white mb-4">Moje projekty</p>
           <h2 className="heading">Portfolio</h2>
         </div>
 
@@ -27,7 +27,7 @@ const Portfolio = (props) => {
         <div className="flex flex-col md:flex-row md:justify-center md:flex-wrap lg:justify-center mb-4 md:mb-8">{imageElements}</div>
         <div className="flex justify-center items-center">
           <Button
-            label="Zobrazit celé portfolio"
+            label="ZOBRAZIT PORTFOLIO"
             className="button"
           />
         </div>

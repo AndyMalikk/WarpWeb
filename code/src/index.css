@@ -7,12 +7,11 @@ html {
   padding: 0;
 }
 body {
-  width: 100dvw;
-  background-color: #161519;
+  background-color: #161519; /*0E0E0E*/
   overflow-x: hidden;
   font-family: "montserrat", sans-serif;
-  min-height: 100vh;
 }
+
 #particles {
   z-index: -1;
   height: 70vh;
@@ -48,38 +47,45 @@ body {
     font-family: "karla-regular";
     src: url("/fonts/karla-regular.woff2") format("woff2");
   }
+  @font-face {
+    font-family: "inter-medium";
+    src: url("/fonts/inter-medium.woff2") format("woff2");
+  }
 }
 
 @layer utilities {
   /*FONT*/
   .hero-heading {
-    @apply text-white text-3xl text-center font-montserrat-bold capitalize mx-2 max-w-[1440px] md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl;
+    @apply text-white text-3xl font-inter-medium capitalize md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl;
   }
   .heading {
-    @apply text-accent text-2xl font-montserrat-bold lg:text-3xl xl:text-4xl;
+    @apply text-accent text-2xl font-inter-medium lg:text-4xl xl:text-5xl;
   }
   .subheading {
   }
   .heading2 {
-    @apply text-white text-2xl font-montserrat-bold lg:text-3xl;
+    @apply text-white text-2xl font-inter-medium lg:text-3xl;
+  }
+  .textSection-heading {
+    @apply text-white text-2xl font-inter-medium lg:text-4xl xl:text-5xl;
   }
   .paragraph {
     @apply text-sm font-karla-regular lg:text-lg leading-6;
   }
   /*BUTTONS*/
   .button {
-    @apply bg-accent text-white font-karla-regular rounded-lg p-2;
+    @apply bg-accent text-white font-karla-regular rounded-full px-4 py-3;
   }
   .button-service {
-    @apply text-white font-karla-regular text-sm text-start w-full bg-[#111014] p-3 rounded-lg;
+    @apply text-white font-karla-regular text-sm text-start w-full bg-[#111014] p-4 rounded-lg;
   }
   /*FORMS*/
   .form-input {
-    @apply text-white bg-transparent border-b-[1px] border-accent focus:outline-none caret-white w-full md:w-[95%];
+    @apply text-white bg-transparent border-b-[1px] border-gray-500 focus:outline-none caret-white w-full;
   }
   /*LAYOUT*/
   .page-width {
-    @apply max-w-[1440px] m-auto;
+    @apply max-w-[1440px] mx-auto;
   }
   /*MISC*/
   .logo {

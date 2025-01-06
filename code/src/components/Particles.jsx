@@ -82,7 +82,7 @@ const ParticlesComponent = (props) => {
           density: {
             enable: true,
           },
-          value: 200, // Same particle count
+          value: 100, // Same particle count
         },
         opacity: {
           value: 1.0,
@@ -104,7 +104,13 @@ const ParticlesComponent = (props) => {
     []
   );
 
-  return <Particles id={props.id} init={particlesLoaded} options={options} />;
+  return (
+    <Particles
+      id={props.id}
+      init={particlesLoaded}
+      options={options}
+    />
+  );
 };
 
 export default ParticlesComponent;
