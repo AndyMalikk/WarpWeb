@@ -42,29 +42,29 @@ const Footer = () => {
 
   // Custom styles for Select component
   const colorStyles = {
-    control: (styles, state) => ({
+    control: (styles) => ({
       ...styles,
       backgroundColor: "transparent",
       border: "none",
-      borderBottom: state.isFocused ? "2px solid gray" : "1px solid gray",
+      borderBottom: "1px solid rgba(107, 114, 128, 1)", // Only bottom border in gray
       boxShadow: "none",
       borderRadius: 0,
       paddingTop: "8px",
       paddingLeft: 0, // Remove any left padding
       fontFamily: "Karla, sans-serif",
-      fontSize: "18px", // Adjust font size for both placeholder and selected value
+      fontSize: "18px",
       "&:hover": {
-        borderBottom: "2px solid gray",
+        borderBottom: "1px solid rgba(107, 114, 128, 1)", // Slightly thicker border on hover
       },
     }),
     placeholder: (styles) => ({
       ...styles,
-      color: "#ccc", // Placeholder color
-      fontStyle: "normal", // Remove italic style
+      color: "#ffffff",
+      fontStyle: "normal",
       fontFamily: "Karla, sans-serif",
-      fontSize: "18px", // Adjust placeholder font size here
+      fontSize: "18px",
       paddingLeft: 0,
-      marginLeft: 0,
+      marginLeft: -6,
     }),
     menu: (styles) => ({
       ...styles,
@@ -73,14 +73,14 @@ const Footer = () => {
       borderRadius: 0,
       border: "none",
       fontFamily: "Karla, sans-serif",
-      fontSize: "18px", // Adjust font size for the menu items
+      fontSize: "18px",
     }),
     option: (styles, state) => ({
       ...styles,
       backgroundColor: state.isSelected ? "#333" : "#161519",
       color: state.isSelected ? "#fff" : "#ccc",
       fontFamily: "Karla, sans-serif",
-      fontSize: "18px", // Adjust font size for the options in the dropdown
+      fontSize: "18px",
       "&:hover": {
         backgroundColor: "#333",
         color: "#fff",
@@ -161,7 +161,7 @@ const Footer = () => {
             <br />
             <br />
             <Button
-              label="ODESLAT"
+              label="Odeslat"
               className="button"
             />
           </form>
@@ -169,7 +169,7 @@ const Footer = () => {
 
         {/*Contacts*/}
         <div className="md:w-1/3 lg:w-1/3">
-          <h2 className="heading mb-2">Kontakty</h2>
+          <h2 className="heading mb-4">Kontakty</h2>
           <div className="flex items-center gap-4">
             <img
               src="./imgs/email.png"
@@ -178,7 +178,7 @@ const Footer = () => {
             />
             <p className="paragraph text-white">info@warp.cz</p>
           </div>
-          <p className="heading2 mt-10 md:mt-20 max-w-[300px]">Pojďme společně posílit váš byznys</p>
+          <p className="heading2 mt-8 md:mt-36 max-w-[300px]">Pojďme společně posílit váš byznys</p>
         </div>
       </div>
 
@@ -223,7 +223,7 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-        <p className="paragraph text-white pb-4">© 2024 Warp</p>
+        <p className="paragraph text-white pb-4">© 2025 Warp</p>
       </div>
     </>
   );

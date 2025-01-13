@@ -11,7 +11,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-transparent fixed top-0 w-full">
+    <nav className="bg-transparent fixed top-0 w-full z-50">
       {/*SIDEBAR*/}
       <ul
         id="sidebar"
@@ -117,7 +117,7 @@ const Navbar = () => {
             className="nav-a"
           >
             <Button
-              label="KONTAKTOVAT"
+              label="Kontaktovat"
               className="button"
             />
           </Link>

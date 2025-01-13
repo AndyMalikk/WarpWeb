@@ -20,14 +20,14 @@ const Portfolio = (props) => {
       <div className="bg-secondary mb-20 py-20 lg:mb-60">
         <div className="text-center mb-8 pt-8">
           <p className="paragraph text-white mb-4">Moje projekty</p>
-          <h2 className="heading">Portfolio</h2>
+          <h2 className="heading mb-12">Portfolio</h2>
         </div>
 
         {/* img container */}
         <div className="flex flex-col md:flex-row md:justify-center md:flex-wrap lg:justify-center mb-4 md:mb-8">{imageElements}</div>
         <div className="flex justify-center items-center">
           <Button
-            label="ZOBRAZIT PORTFOLIO"
+            label="Zobrazit portfolio"
             className="button"
           />
         </div>

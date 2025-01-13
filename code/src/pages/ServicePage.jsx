@@ -15,19 +15,6 @@ const ServicePage = () => {
         body="Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum. Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum."
       />
 
-      <Intro
-        subheading="1."
-        heading="UI/UX Design"
-        body="Navrhuji rozhraní, která zaujmou vzhledem a usnádní práci vašim zákazníkům. Kladu důraz na jednoduchost, přhlednost a pohodlí při používání."
-        img="./imgs/EmptyIMG.jpg"
-      />
-      <Intro
-        subheading="2."
-        heading="WEB DEVELOPMENT"
-        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit sit amet lorem nec viverra. Etiam libero nisi."
-        img="./imgs/EmptyIMG.jpg"
-        reverse={true}
-      />
       <Footer />
     </>
   );

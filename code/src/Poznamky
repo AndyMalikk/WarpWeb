@@ -1,10 +1,37 @@
-3. Image overlay v INTRO componentu - grid - REUSE IT in aboutmepage
-4. Particles lines jdou out of bound kdyz je cursor pod HERO sekci.
+3. Image overlay v INTRO componentu - grid - REUSE IT in aboutmepage - x
 5. Transform BUTTON animation
-6. Nastavit JASNE DANY margins mezi sekcema
-7. Nastavit Paddingy.
-8. CLEAN THE CODE DAMN
-9. V Navbaru se musis naucit nejak handlovat Routing kdyz klikas na krizek a menu svg. Video najdes na youtube. {children}?
-10. Clean up React Router
-11. Pridej neco do homepage, je moc prazdna. Pod portfolio me napada dat nejaky video skladani webovky.
-12. Upgrade to router v7
+6. Nastavit Paddingy.
+7. CLEAN THE CODE DAMN
+8. Clean up React Router
+9. Pridej neco do homepage, je moc prazdna. Pod portfolio me napada dat nejaky video skladani webovky.
+10. Upgrade to router v7
+11. udelej vsechny headingy etc. black and white verze , at je pak muzes jednoduse zmenit
+
+Upgrades:
+
+- Animations
+- Slider na reviews
+- More content, quotes?, why us
+
+GOALS TODAY:
+Main:
+ADMIN PAGE - pocka
+SAVE DATA FROM FORMS - x
+DESIGN THE PORTFOLIO - x
+RADIO IN FORM - x
+
+Side:
+MORE CONTENT IN SERVICES
+
+PRED OBHAJOBAMA: (serazeno podle priority)
+BETTER HERO - x
+FILL IN CONTENT
+PORTFOLIO + FILTER 
+BUTTONS hover animation - 
+CLEAN m Navbar - x
+SERVICES to homepage and read more in services page - x
+SLIDING TEXT ANIMATION IN HERO SECTION
+zmensit margins mezi headings a paragraphs na telefonu
+Routing v7
+Routing ve footeru
+

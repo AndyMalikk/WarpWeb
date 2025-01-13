@@ -3,7 +3,7 @@ import React from "react";
 const Review = (props) => {
   return (
     <>
-      <div className="bg-secondary mb-20 text-center p-12 lg:p-12 lg:mb-60">
+      <div className="bg-secondary mb-20 text-center p-12 lg:p-24 lg:mb-60">
         <p className="text-white paragraph mb-4 lg:mb-12">{props.reviewText}</p>
         <div className="flex justify-center items-center gap-3">
           <img
