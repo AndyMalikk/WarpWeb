@@ -51,7 +51,7 @@ const Footer = () => {
       borderRadius: 0,
       paddingTop: "8px",
       paddingLeft: 0, // Remove any left padding
-      fontFamily: "Karla, sans-serif",
+      fontFamily: "karla-regular, sans-serif",
       fontSize: "18px",
       "&:hover": {
         borderBottom: "1px solid rgba(107, 114, 128, 1)", // Slightly thicker border on hover
@@ -61,9 +61,10 @@ const Footer = () => {
       ...styles,
       color: "#ffffff",
       fontStyle: "normal",
-      fontFamily: "Karla, sans-serif",
+      fontFamily: "karla-regular, sans-serif",
       fontSize: "18px",
       paddingLeft: 0,
+      paddingBottom: 3,
       marginLeft: -6,
     }),
     menu: (styles) => ({
@@ -72,14 +73,14 @@ const Footer = () => {
       marginTop: 0,
       borderRadius: 0,
       border: "none",
-      fontFamily: "Karla, sans-serif",
+      fontFamily: "karla-regular, sans-serif",
       fontSize: "18px",
     }),
     option: (styles, state) => ({
       ...styles,
       backgroundColor: state.isSelected ? "#333" : "#161519",
       color: state.isSelected ? "#fff" : "#ccc",
-      fontFamily: "Karla, sans-serif",
+      fontFamily: "karla-regular, sans-serif",
       fontSize: "18px",
       "&:hover": {
         backgroundColor: "#333",

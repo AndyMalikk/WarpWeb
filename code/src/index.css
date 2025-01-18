@@ -75,9 +75,15 @@ body {
   .paragraph {
     @apply text-sm font-karla-regular lg:text-lg leading-6;
   }
+  .paragraph-accent {
+    @apply text-sm font-karla-regular lg:text-lg leading-6 text-accent;
+  }
+  .paragraph-white {
+    @apply text-sm font-karla-regular lg:text-lg leading-6 text-white;
+  }
   /*BUTTONS*/
   .button {
-    @apply bg-accent text-white font-karla-regular rounded-full px-4 py-3 uppercase;
+    @apply bg-accent text-white font-karla-regular rounded-full px-4 py-3 uppercase hover:bg-darkAccent;
   }
   .button-service {
     @apply text-white font-karla-regular text-sm text-start w-full bg-[#111014] p-4 rounded-lg;
@@ -93,6 +99,12 @@ body {
   /*MISC*/
   .logo {
     @apply w-[75px] h-auto sm:w-[100px] md:w-[125px];
+  }
+  .bullet-list {
+    @apply flex items-center gap-4;
+  }
+  .bullet-list-item {
+    @apply w-1 lg:w-2 h-1 lg:h-2 bg-green-500;
   }
   /* NAVBAR */
   .nav-text {

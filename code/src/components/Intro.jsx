@@ -11,8 +11,8 @@ const Intro = () => {
           {/* text container*/}
           <div className="lg:w-1/2">
             <h3 className="text-white paragraph mb-4">Co dělám?</h3>
-            <h2 className="heading mb-12">Webové stránky na zakázku</h2>
-            <p className="paragraph text-white max-w-[600px] mb-6">
+            <h2 className="heading mb-8">Webové stránky na zakázku</h2>
+            <p className="paragraph text-white max-w-[600px] mb-8">
               Warp je česká digitální agentura, která pomáhá firmám vyniknout online. <br />
               Vytvářím našim klientům webové stránky, které nejen že dobře vypadají, ale také jim dávají na trhu výhodu.
             </p>

@@ -13,14 +13,18 @@ const Card = (props) => {
         <div className="lg:w-1/2">
           <div className="border-l-[1px] border-accent p-8">
             <p className="text-white paragraph mb-4">{props.subheading}</p>
-            <h2 className="heading-white mb-12">{props.heading}</h2>
-            <p className="paragraph text-white max-w-[40rem] mb-12">{props.body}</p>
-            <Link
-              to="/sluzby"
-              className="text-white underline"
-            >
-              Číst více
-            </Link>
+            <h2 className="heading-white mb-8">{props.heading}</h2>
+            <p className="paragraph text-white max-w-[40rem] mb-8">{props.body}</p>
+            {props.linkShown ? (
+              <Link
+                to="/sluzby"
+                className="text-white underline hover:text-accent"
+              >
+                Číst více
+              </Link>
+            ) : (
+              ""
+            )}
           </div>
         </div>
         {/* img container */}
