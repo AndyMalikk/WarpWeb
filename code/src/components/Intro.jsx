@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
   return (
@@ -16,15 +17,17 @@ const Intro = () => {
               Warp je česká digitální agentura, která pomáhá firmám vyniknout online. <br />
               Vytvářím našim klientům webové stránky, které nejen že dobře vypadají, ale také jim dávají na trhu výhodu.
             </p>
-            <Button
-              label="Chci web"
-              className="button"
-            />
+            <Link to="/kontakty">
+              <Button
+                label="Chci web"
+                className="button"
+              />
+            </Link>
           </div>
           {/* img container */}
           <div className="lg:w-1/2">
             <img
-              src="./imgs/EmptyIMG.jpg"
+              src="./public/imgs/Pairprogramming-bro.png"
               alt=""
               className="w-full rounded-lg"
             />

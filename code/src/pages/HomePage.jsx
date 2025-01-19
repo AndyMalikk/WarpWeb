@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Intro from "../components/Intro";
-import Portfolio from "../components/Portfolio";
+import PortfolioShowcase from "../components/PortfolioShowcase";
 import Services from "../components/Services";
 import Review from "../components/Review";
 import Footer from "../components/Footer";
@@ -18,26 +18,26 @@ const HomePage = () => {
         heading="Buďte tam kde vás zákazníci hledají"
       />
       <Intro />
-      <Portfolio images={["./imgs/EmptyIMG.jpg", "./imgs/EmptyIMG.jpg", "./imgs/EmptyIMG.jpg", "./imgs/EmptyIMG.jpg"]} />
+      <PortfolioShowcase images={["./imgs/PenzionKytlice.png", "./imgs/VOblacich.png", "./imgs/Valhalla.png", "./imgs/Abstract.png"]} />
       <TextSection
         heading="Webové stránky nemusí stát statisíce."
         body="Nabízím webové stránky za dostupné ceny, ideální pro malé byznysy a začínající podnikatele."
       />
-
+      <h3 className="text-white paragraph mb-4 text-center">Moje Role</h3>
       <h2 className="heading text-center mb-16">Služby</h2>
 
       <Card
         subheading="1."
         heading="UI/UX Design"
         body="Navrhuji rozhraní, která zaujmou vzhledem a usnádní práci vašim zákazníkům. Kladu důraz na jednoduchost, přhlednost a pohodlí při používání."
-        img="./imgs/EmptyIMG.jpg"
+        img="./imgs/MobileUI-UX-amico.png"
         linkShown={true}
       />
       <Card
         subheading="2."
         heading="WEB DEVELOPMENT"
         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit sit amet lorem nec viverra. Etiam libero nisi."
-        img="./imgs/EmptyIMG.jpg"
+        img="./imgs/Open source-amico.png"
         linkShown={true}
         reverse={true}
       />

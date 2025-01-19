@@ -1,36 +1,95 @@
 import React from "react";
-import Button from "./Button";
+import { useState, useEffect } from "react";
+import Website from "./Website";
+import Filter from "./Filter";
 
-const Portfolio = (props) => {
-  {
-    /*maps through images array and adds the following code into every index. The array is set in App.jsx*/
-  }
-  const imageElements = props.images.map((image, index) => (
-    <img
-      key={index}
-      src={image}
-      alt=""
-      className="w-full md:w-1/2 lg:w-1/4"
-    ></img>
-  ));
+const Portfolio = () => {
+  const [portfolioWebsites, setPortfolioWebsites] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+  const [activeType, setActiveType] = useState(0);
+  useEffect(() => {
+    //typeIds: 0 - vse, 1 - business, 2 - ubytovani/restaurace, 3 - osobni
+    const websites = [
+      {
+        title: "Kytlice",
+        src: "./public/imgs/PenzionKytlice.png",
+        alt: "webová stránka Penzion Kytlice",
+        typeId: 2,
+        id: "2",
+      },
+      {
+        title: "V Oblacích",
+        src: "./public/imgs/VOblacich.png",
+        alt: "webová stránka V Oblacích",
+        typeId: 2,
+        id: "3",
+      },
+      {
+        title: "Valhalla",
+        src: "./public/imgs/Valhalla.png",
+        alt: "webová stránka Valhalla",
+        typeId: 1,
+        id: "1",
+      },
+
+      {
+        title: "Abstract",
+        src: "./public/imgs/abstract.png",
+        alt: "webová stránka Abstract",
+        typeId: 1,
+        id: "4",
+      },
+      {
+        title: "Alpen Tesitin",
+        src: "./public/imgs/AlpenTesitin.png",
+        alt: "webová stránka Alpen Tesitin",
+        typeId: 2,
+        id: "5",
+      },
+      {
+        title: "Leeroy",
+        src: "./public/imgs/Leeroy.png",
+        alt: "webová stránka Leeroy",
+        typeId: 1,
+        id: "6",
+      },
+      {
+        title: "Michael Aust",
+        src: "./public/imgs/MichaelAust.png",
+        alt: "webová stránka Michaela Austa",
+        typeId: 3,
+        id: "7",
+      },
+      {
+        title: "Weglot",
+        src: "./public/imgs/Weglot.png",
+        alt: "webová stránka Weglot",
+        typeId: 1,
+        id: "8",
+      },
+    ];
+    setPortfolioWebsites(websites);
+    setFiltered(websites);
+  }, []);
 
   return (
     <>
-      {/* text container */}
-      <div className="bg-secondary mb-20 py-20 lg:mb-60">
-        <div className="text-center mb-8 pt-8">
-          <p className="paragraph text-white mb-4">Moje projekty</p>
-          <h2 className="heading mb-8">Portfolio</h2>
-        </div>
-
-        {/* img container */}
-        <div className="flex flex-col md:flex-row md:justify-center md:flex-wrap lg:justify-center mb-4 md:mb-8">{imageElements}</div>
-        <div className="flex justify-center items-center mb-8">
-          <Button
-            label="Zobrazit portfolio"
-            className="button"
-          />
-        </div>
+      <Filter
+        portfolioWebsites={portfolioWebsites}
+        setFiltered={setFiltered}
+        activeType={activeType}
+        setActiveType={setActiveType}
+      />
+      {/*portfolio cards */}
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(450px,_1fr))] gap-x-4 gap-y-8 page-width px-4 mb-16 lg:mb-40">
+        {filtered.map((website) => {
+          return (
+            <Website
+              key={website.id}
+              website={website}
+            />
+          );
+        })}
       </div>
     </>
   );

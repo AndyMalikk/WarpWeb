@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import Select from "react-select";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   /* OPTIONS FOR FORM SELECT */
@@ -192,16 +193,16 @@ const Footer = () => {
         />
         <ul className="nav-text text-white flex gap-4 mb-4">
           <li>
-            <a href="#">O mně</a>
+            <Link to="/o-mne">O mně</Link>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
-            <a href="#">Služby</a>
+            <Link to="/sluzby">Služby</Link>
           </li>
           <li>
-            <a href="#">Kontakty</a>
+            <Link to="/kontakty">Kontakty</Link>
           </li>
         </ul>
         <ul className="flex gap-4 mb-4">

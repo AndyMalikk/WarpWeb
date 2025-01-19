@@ -1,6 +1,7 @@
 import React from "react";
-import videoBg from "../../public/imgs/bg-video-timelapse-finalV3.mp4";
+import videoBg from "../../public/imgs/bg-video-timelapse-final.mp4";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Hero = (props) => {
   return (
@@ -21,10 +22,12 @@ const Hero = (props) => {
           <div className="absolute w-full h-full top-0 flex flex-col justify-center items-start text-white mx-4">
             <p className="paragraph text-accent mb-8">{props.subheading}</p>
             <h1 className="hero-heading max-w-[800px] mb-8">{props.heading}</h1>
-            <Button
-              label="Kontaktovat"
-              className="button"
-            />
+            <Link to="/kontakty">
+              <Button
+                label="Kontaktovat"
+                className="button"
+              />
+            </Link>
           </div>
         </div>
       </div>

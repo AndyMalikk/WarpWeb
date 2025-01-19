@@ -21,7 +21,7 @@ const ServicePage = () => {
         heading="UI/UX Design"
         body="Navrhuji rozhraní, která zaujmou vzhledem a usnádní práci vašim zákazníkům. Kladu důraz na jednoduchost, přhlednost a pohodlí při používání. 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam risus, eu cursus velit scelerisque eget. Sed quis maximus purus, sed lacinia leo. Sed ultrices consequat massa, eget congue metus posuere quis. "
-        img="./imgs/EmptyIMG.jpg"
+        img="./imgs/MobileUI-UX-amico.png"
       />
       <h3 className="heading-white page-width mb-12 p-4">
         Můj postup práce při <span className="text-accent">UI/UX Designu</span>
@@ -39,7 +39,7 @@ const ServicePage = () => {
         heading="WEB DEVELOPMENT"
         body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit sit amet lorem nec viverra. Etiam libero nisi. 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam risus, eu cursus velit scelerisque eget. Sed quis maximus purus, sed lacinia leo. Sed ultrices consequat massa, eget congue metus posuere quis. "
-        img="./imgs/EmptyIMG.jpg"
+        img="./imgs/Open source-amico.png"
         reverse={true}
       />
       <Footer />
